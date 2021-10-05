@@ -1,0 +1,23 @@
+
+[package]
+name = "solana-bpf-token-mint"
+version = "0.0.1"
+license = "Apache-2.0"
+edition = "2018"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+borsh = "0.9.1"
+borsh-derive = "0.9.1"
+solana-program = "=1.7.9"
+spl-token = {version = "3.1.1", features = ["no-entrypoint"]}
+
+[dev-dependencies]
+solana-program-test = "=1.7.9"
+solana-sdk = "=1.7.9"
+
+[lib]
+name = "token"
+crate-type = ["cdylib", "lib"]
